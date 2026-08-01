@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: national-girlfriends-day
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.0
